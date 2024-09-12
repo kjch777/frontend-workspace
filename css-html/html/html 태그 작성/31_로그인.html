@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인 하기</title>
+
+    <!-- jQuery CDN 주소 가져오기-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+
+  <body>
+    <form id="loginForm" action="31_로그인결과.html" method="get">
+      <label>아이디: </label>
+      <input type="text" id="loginID" />
+      <br /><br />
+
+      <label>비밀번호: </label>
+      <input type="password" id="loginPW" />
+      <br /><br />
+
+      <button type="submit" onclick="로그인버튼(event)">로그인 하기</button>
+    </form>
+
+    <script>
+      function 로그인버튼(event) {
+        const loginID = $("#loginID").val(); // 입력한 아이디 정보 가져오기
+        const loginPW = $("#loginPW").val(); // 입력한 비밀번호 정보 가져오기
+
+        // local storage 에 저장된 회원가입 정보 가져오기
+        const saveID = localStorage.getItem("setID");
+        const savePW = localStorage.getItem("setPW");
+
+        // window.location.href = "31_로그인결과.html";
+
+        // 만약, 일치하는 아이디 비밀번호 정보가 없다면
+        if (loginID !== saveID || loginPW !== savePW) {
+          alert("일치하는 ID 또는 PW 가 없습니다.");
+          event.preventDefault(); // form 이동 막아버리기
+        }
+      }
+    </script>
+  </body>
+</html>

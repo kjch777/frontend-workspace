@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- html 5 버전 사용-->
+
+<html lang="ko"> <!-- html 코딩 시작. lang="ko" 를 작성해주면, 검색엔진 언어로 korean 한국어를 사용하겠다는 뜻이다.-->
+    
+    <head> <!-- meta style title link script 등을 작성하는 공간이다.-->
+        
+        <meta charset="UTF-8" />
+        <title>표를 사용하여 이미지 보여주기</title>
+        <style>
+            /*크기 지정할 때 px를 작성해주어야 한다.
+              마지막 태그에만 ;를 작성해주면 되는 것 같다.*/
+            th, td {
+                border: 1px solid silver;
+                text-align: center;
+                padding: 10px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th {
+                background-color: beige;
+                color: black;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h2>귀염둥이 삼총사</h2>
+        <table>
+            <tr>
+                <th>사진</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>특징</th>
+            </tr>
+            <tr>
+                <td><img src="C:/Users/user1/frontend-workspace/html/이미지들/pajamaMarley.jpg" /></td>
+                <!-- 확장자까지 필수로 써주어야 한다.-->
+                <td>말리</td>
+                <td>5살</td>
+                <td>잘 먹는다.<br>빨리 먹는다.</td>
+            </tr>
+            <tr>
+                <td><img src="../이미지들/hogam.jpg" /></td>
+                <td>호감</td>
+                <td>4살</td>
+                <td>많이 먹는다.<br>가리지 않는다.</td>
+            </tr>
+            <tr>
+                <td><img src="../이미지들/healing.jpg" /></td>
+                <td>힐링</td>
+                <td>11살</td>
+                <td>잘 공격한다.<br>생존능력 우수.</td>
+            </tr>
+        </table>
+    </body>
+
+</html> <!-- html 코딩 종료-->

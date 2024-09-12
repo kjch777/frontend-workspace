@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="utf-8" />
+    <title>회원가입</title>
+
+    <!-- jQuery CDN 주소 가져오기-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+
+  <body>
+    <h1>회원가입</h1>
+    <form action="31_로그인.html" method="get">
+      <label>아이디:</label>
+      <input type="text" id="signID" />
+      <br /><br />
+
+      <label>비밀번호:</label>
+      <input type="password" id="signPW" />
+      <br /><br />
+
+      <button type="submit" onclick="회원가입버튼()">회원가입 하기</button>
+    </form>
+
+    <script>
+      // 정규식 일치 여부 판별을 위해 event 를 넣어준 것
+      // event.preventDefault 를 사용하기 위하여 작성해 준 것이다.
+      function 회원가입버튼() {
+
+        // event.preventDefault; // 버튼을 눌러 form 을 제출하는 것을 막아버리기
+
+        // 아이디로 입력한 값 가져오기
+        const id = $("#signID").val();
+        // 비밀번호로 입력한 값 가져오기
+        const pw = $("#signPW").val();
+
+        // 회원가입할 때 입력한 정보를 local storage 에 저장
+        localStorage.setItem("setID", id);
+        localStorage.setItem("setPW", pw);
+
+        // form 태그에서 action 속성을 이용하여 다른 html 파일로 이동할 수도 있지만,
+        // window.location.href="이동하고자하는파일명.html"; 형식으로 작성하여 다른 html 파일로 이동 가능하다.
+        // window.location.href = "31_로그인.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>실습 문제 1</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form>
+      <label>ID</label>
+      <input type="text" placeholder="10글자 이내" />
+      <button>중복 확인</button>
+      <br />
+
+      <label>비밀번호</label>
+      <input type="text" placeholder="영문, 숫자, 특수문자를 포함 8자리 이상" />
+      <br />
+
+      <label>비밀번호 확인</label>
+      <input type="text" />
+      <br />
+
+      <label>이메일</label>
+      <input type="email" />
+      <select>
+        <option>직접 입력</option>
+        <option>gamil.com</option>
+      </select>
+      <br />
+
+      <label>성별: </label>
+      <input type="radio" name="gender" />남성
+      <input type="radio" name="gender" />여성
+      <br />
+
+      <label>생년월일: </label>
+      <input type="date" name="birthday" />
+      <br />
+
+      <label>취미</label>
+      <br />
+      <input type="checkbox" name="hobby" />야구
+      <input type="checkbox" name="hobby" />농구
+      <input type="checkbox" name="hobby" />축구
+      <br />
+      <input type="checkbox" name="hobby" />공부
+      <input type="checkbox" name="hobby" />음악 감상
+      <br />
+
+      <label for="">자기 소개</label>
+      <textarea name="intro" rows="10" cols="80"></textarea>
+      <button type="submit">회원 가입</button>
+      <button type="reset">다시 입력</button>
+    </form>
+  </body>
+</html>

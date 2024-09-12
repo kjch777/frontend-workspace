@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="utf-8" />
+    <title>MBTI</title>
+    <link rel="stylesheet" href="../css/17_MBTI.css">
+    <!-- 태그 여러개에 한꺼번에 적용하려면,
+         태그, 태그 { } 형식으로 태그와 태그 사이에 , 를 작성해 주어야 한다.-->
+    <!-- head 태그 내부에 있는 style 태그 내부에는 주석을 달 수 없다.-->
+  </head>
+  <body>
+    <h1>성격 유형 테스트</h1>
+    <div class="문제">
+      <p>각 질문에 대하여 답변을 솔직하게 선택하세요.</p>
+      <div id="문제1">
+        <p>1. 새로운 사람들과 만날 때 어떻게 반응하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('E')">
+            활발하게 접근한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('I')">
+            조용하게 관찰한다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제2" style="display: none">
+        <p>2. 주어진 일에 대하여 어떤 모습을 보이나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('S')">
+            실제적이고 현실적이다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('N')">
+            감정적이고 친화적이다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제3" style="display: none">
+        <p>3. 변화에 대처할 때 어떻게 행동하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('T')">
+            논리적이고 분석적이다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('F')">
+            감정적이고 비전을 갖는다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제4" style="display: none">
+        <p>4. 계획을 세울 때 주로 어떤 방식을 사용하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('J')">
+            계획을 세우고 준비한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('P')">
+            융통성있게 대처한다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제5" style="display: none">
+        <p>5. 스트레스 상황에서 보통 어떤 행동을 하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('E')">
+            사람들과 소통한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('I')">
+            혼자서 시간을 보낸다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제6" style="display: none">
+        <p>6. 새로운 환경에서 어떻게 적응하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('E')">
+            적극적으로 새로운 사람들과 교류한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('I')">
+            혼자서 천천히 적응한다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제7" style="display: none">
+        <p>7. 의사 결정을 할 때 어떤 방식을 선호하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('F')">
+            감정과 사람들을 고려하여 결정한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('T')">
+            논리와 이성을 기반으로 결정한다.
+          </div>
+        </div>
+      </div>
+
+      <div id="문제8" style="display: none">
+        <p>8. 일정을 계획할 때 어떤 방식을 사용하나요?</p>
+        <div class="선택한옵션들">
+          <div class="선택한옵션" onclick="옵션선택('P')">
+            상황에 따라 유연하게 대처한다.
+          </div>
+          <div class="선택한옵션" onclick="옵션선택('J')">
+            철저하게 계획하고 일정에 맞춘다.
+          </div>
+        </div>
+      </div>
+
+      <div id="결과확인"></div>
+
+      <script src="../js/17_MBTI.js"></script>
+    </div>
+  </body>
+</html>

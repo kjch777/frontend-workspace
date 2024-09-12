@@ -1,0 +1,125 @@
+<!DOCTYPE html> <!-- html 5 버전-->
+
+<html lang="ko"> <!-- html 코딩 시작 및 검색엔진 언어 설정-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>영역 관련 태그</title>
+        <style>
+            .test {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+            .테스트 {
+                width: 300px;
+                height: 300px;
+                background-color: yellow;
+            }
+            .one {
+                background-color: red;
+            }
+            .two {
+                background-color: orange;
+            }
+            .three {
+                background-color: yellow;
+            }
+            .four {
+                background-color: green;
+            }
+            .five {
+                background-color: blue;
+            }
+            .six {
+                background-color: indigo;
+            }
+            .seven {
+                background-color: violet;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>style 태그 내용 적용 확인</h3>       
+        <!-- 복제 단축키 : Alt + Shift + F-->
+        <!-- div 태그에서 색상이나 스타일을 선택적으로 적용하고자 할 때는,
+             class="변수명" 형식으로 코드를 작성하여, 스타일을 구분지을 수 있다.
+             head 에서 style 태그 안에 내가 미리 작성해둔 변수명을 지정해서 사용하고 싶다면,
+             head
+                style
+                    .변수명 {
+
+                    } 형식으로 작성해야 한다.-->
+        <div class="test"></div>
+        <div> aaaaa </div>
+        <div class="test"></div>
+        <div class="테스트"></div>
+        <hr> <!--구분선-->
+        <h1>block 형식</h1>
+        <pre>
+            - 화면에서 공간을 세로로 분할하고 싶을 때 사용한다. 
+            
+            - block 형식의 태그 종류 ▼
+                - h1 ~ h6 (제목)            
+                - p / pre (문단) ◀ 주로 글자에 사용한다.
+                - hr     (수평선)
+                - div   (영역 분할) ◀ 글자, 텍스트, 그림, 각종 파일 표현에 두루 사용한다.
+            
+            블록 형식 태그들은 작성된 내용이 짧더라도 한 줄을 모두 차지하는 성질 때문에,
+            다음 태그 내용을 한 번에 작성하지 않고, 따로 나누어 다음에 작성한다.
+        </pre>
+        <h3>div 형식</h3>
+        <pre>
+            - 가장 많이 사용하는 태그이다.
+            - 주로 문서를 구분지을 때 사용한다.
+            - div 안에 div 를 쓰는 이중 div 형식이 많이 사용된다.
+            - div 시작 태그 안에 작성한 <mark>class</mark> 는 head 부터 foot 에 이르기까지 모두 사용 가능하다.
+            - p h1 pre table 등 모든 태그에 사용 가능하다.
+            - <mark>class</mark>는 홈페이지를 꾸밀 때 많이 사용한다.(style 안에 사용)
+        </pre>
+        <div class="one">첫번째 div</div>
+        <div class="two">두번째 div</div>
+        <div class="three">세번째 div</div>
+        <div class="four">네번째 div</div>
+        <div class="five">다섯번째 div</div>
+        <div class="six">여섯번째 div</div>
+        <div class="seven">일곱번째 div</div>
+        <h1>inline 형식</h1>
+        <pre>
+            - 화면에서 공간을 가로로 분할하고 싶을 때 사용한다.
+            - 한 공간을 모두 차지하지 않고, 내부에 작성된 내용 크기만큼만 차지한다.
+            - 해당 태그에서는 width, height 와 같은 크기 지정 속성은 사용할 수 없다.
+            
+            - 대표적인 line 형식 태그 목록
+                - b : 굵기
+                - i : 기울이기
+                - mark : 글 배경 색
+                - span : 영역 분할
+        </pre>
+        <p>
+            <b>in line 형식은</b>
+            <i>가로를 세로로 분할하는 성질을 가지고 있어서,</i>
+            <mark>한 줄을 전부 차지하지 않고, 작성한 만큼만 적용된다.</mark>
+            <br> <!-- Enter 처럼 줄바꿈 역할을 한다.-->
+            <span class="one">첫번째 span</span>
+            <span class="two">두번째 span</span>
+            <span class="three">세번째 span</span>
+        </p>
+        <ul>
+            <li> block 형식 : 가로를 모두 차지하는 영역이다.</li>
+            <li>inline 형식 : 내용을 가로로 작성해준 만큼만 영역을 차지한다.</li>
+        </ul>
+        <h3>block div 태그 확인하기</h3>
+        <div class="three">오늘도 점심을 챙겨 먹었다<br>
+                           건강해지나?<br>
+                           아니면 어쩔 수 없지...<br>
+                           먹지 않을 순 없다.</div>
+        <hr>
+        <h3>inline span 태그 확인</h3>
+        <span class="three">내일도 점심을 먹을 것이다.<br>
+                            아! 내일은 점심을 못 먹는다.<br>
+                            상담 가야해...</span>
+    </body>
+
+</html>

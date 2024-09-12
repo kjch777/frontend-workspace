@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" /> <!-- 하나의 태그 안에서 모든 작성을 끝낼 땐,
+                                      /> 로 작성해주는 것이 좋다. -->
+        <title>과일 나라</title>
+        <style>
+            /* 이 주석은 <style> 태그 안에서만 사용할 수 있다.
+               이 주석 안에서 < > 를 함부로 사용하면, 주석이 풀리는 경우가 있다!! 주의!!
+              style img { 이렇게 작성해주면, 해당 html 안에 있는 모든 img 태그에 스타일이 적용된다. } /style
+              padding : 상하좌우 동일한 간격으로 공간을 확보할 때 사용한다.
+              border : 테두리에 관련된 설정을 해줄 때 사용한다.
+                테두리 사이즈 : n px n 두께의 선으로 그려준다.
+                               테두리 사이즈 숫자가 커질 수록 테두리 사이즈도 커진다.
+                solid : 일반적인 라인으로 테두리를 그려준다.
+                색상 : 테두리 색상 지정
+              style 에는 똑같은 태그를 여러번 불러와 설정할 수 있다.
+              , 를 사용해서 작성할 때는 동일한 속성을 작성해줄 때뿐이며,
+              , 를 사용하지 않을 때는 해당 태그가 단독으로 스타일을 적용하길 원할 때이다.
+              */
+            th, td {
+                border: 1px solid violet;
+                text-align: center;
+                padding: 10px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th {
+                background-color: violet;
+                color: white;
+            }
+            img {
+                width: 50px;
+                height: 50px
+            }
+        </style>
+    </head>
+    <body>
+        <h2>과일 가격표</h2>
+        <table> <!---->
+            <tr>
+                <th>과일</th>
+                <th>가격</th>
+                <th>이미지</th>
+            </tr>
+            <tr>
+                <td>사과</td>
+                <td>1,000원</td>
+                <td><img src="https://img.hankyung.com/photo/202403/AA.36104679.1.jpg" 
+                         alt="사과" /></td>
+            </tr>
+            <tr>
+                <td>바나나</td>
+                <!-- 절대 경로를 탐색기에서 바로 따오면 Preview 에서는 깨진다.-->
+                <td>800원</td>
+                <td><img src="C:/Users/user1/Desktop/메모리 구조/바나나.jpg" 
+                         alt="바나나" /></td>
+            </tr>
+            <tr>
+                <td>딸기</td>
+                <td>1,500원</td>
+                <td><img src="../이미지들/딸기.jpg"
+                         alt="딸기" /></td>
+            </tr>
+        </table>
+    </body>
+</html>

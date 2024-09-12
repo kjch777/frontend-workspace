@@ -1,0 +1,95 @@
+/* 폰트는 보통 맨 위에 작성해 준다.*/
+@font-face {
+    font-family: "이름은맘대로";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2")
+      format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+body {
+    font-family: "이름은맘대로";
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.컨테이너 {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.헤더 {
+    /* background-color: 배경에 단색 적용할 때 사용한다.
+        backgroud-image: 배경에 이미지를 삽입할 때 사용한다.
+                         이미지 경로, 그라데이션 등을 작성해 준다.
+                               경로 ▶ background-image: url('이미지.이미지확장자');
+                          그라데이션 ▶ background-image: linear-gradient('방향, 색상1, 색상2, ...');
+                                                         radial-gradient(중심위치, 원모양크기, 색상1, 색상2, ...);
+    */
+    background-image: linear-gradient(to right, orange 30%, rgb(219, 38, 32), #f0ec1e);
+}
+
+.네비게이션 {
+    background-image: radial-gradient(circle, rgb(233, 192, 199), #a6beda);
+    text-align: center;
+}
+
+/*
+html 코드 안에 있는 모든 a 태그의 스타일을 한꺼번에 변경하고 싶지 않다면,
+특정 영역 안에 있는 a 태그만 변경을 진행하면 된다.
+
+.클래스명 태그명 {
+
+}
+
+클래스명이 존재하지 않을 경우
+태그명 태그명 {
+
+}
+
+<div class="네비게이션">
+    <ul>
+        <li><a href="#">메인</a></li>
+    </ul>
+</div>
+
+div 태그 옆에 작성한 class 이름인 네비게이션을 먼저 가져온 다음,
+특정하여 변경할 태그 이름을 작성해 주면 된다.
+
+만약, 네비게이션 안에 작성한 a 태그의 글자만을 변경하고 싶다면, 아래처럼 작성해 주면 된다.
+이 때, 구분자는 띄어쓰기 이다.
+
+.네비게이션 a {
+    color: black;
+}
+*/
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+.특징 {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #d7d7d7;
+}
+
+.푸터 {
+    background-color: #94bbe9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}

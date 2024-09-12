@@ -1,0 +1,69 @@
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  /* 화면에서 보이는 세로 크기를 유동적으로 설정하여,
+           화면에 100% 보일 수 있게 작성해 주는 것
+           예를 들어, 높이가 1000px 인 곳에서 100vh 를 작성해 주면, 1000px 로 나타낼 수 있다.
+                     높이가 800px 인 곳에서 100vh 를 작성해 주면, 800px 로 나타낼 수 있다.
+        
+           vh 는 view height 의 약자이다.*/
+
+  margin: 0;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+  width: 300px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: green;
+}
+
+.genderOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.genderOption input {
+  margin: 0 5px 0 0;
+}
+
+.genderOption label {
+    margin-right: 30px;
+    margin-left: -70px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Practice 1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <!--
+    <p id="text">안녕하세요</p>
+    <button id="change-text">텍스트 변경</button>
+
+    <script>
+        
+        $(document).ready(function(){
+            $("#change-text").click(function() {
+                $("#text").text("반갑습니다");
+            })
+        })
+    </script>
+    -->
+    <!--
+    <p id="text">안녕하세요</p>
+    <button id="change-text" onclick="변경하기()">텍스트 변경</button>
+
+    <script>
+      function 변경하기() {
+        $("#text").text("반갑습니다");
+      }
+    </script>
+    -->
+    <p id="text">안녕하세요</p>
+    <button id="change-text" onclick="변경하기()">텍스트 변경</button>
+
+    <script>
+        function 변경하기() {
+            const change = document.getElementById("text");
+            
+            change.textContent="반갑습니다";
+            
+        }
+    </script>
+
+  </body>
+</html>

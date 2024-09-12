@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인 결과 확인하기</title>
+
+    <!-- jQuery CDN 주소 가져오기-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>로그인 성공</h1>
+      <p>환영합니다, <span id="loginUser"></span> 님.</p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // local storage 에서, 로그인한 사용자 아이디 가져오기
+        const id = localStorage.getItem("setID");
+        $("#loginUser").text(id);
+      });
+    </script>
+  </body>
+</html>

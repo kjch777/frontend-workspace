@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>레이아웃 실습</title>
+  </head>
+  <body>
+    <h1>레이아웃 실습 해보기</h1>
+    <h3>block 형식 태그(요소)를 inline 형식으로 변경하기</h3>
+    <style>
+      .블록 {
+        border: 2.5px dashed black;
+        display: inline;
+      }
+      .영역1 {
+        background-color: lightcoral;
+      }
+      .영역2 {
+        background-color: lightblue;
+        color: white;
+      }
+    </style>
+    <div class="블록 영역1">1번 영역</div>
+    <div class="블록 영역2">2번 영역</div>
+    <h3>inline-block, none 확인해보기</h3>
+    <style>
+      .인라인블록 {
+        display: inline-block;
+      }
+      .영역4 {
+        background-color: lightgoldenrodyellow;
+      }
+      .영역6 {
+        background-color: lightgreen;
+      }
+      .히든 {
+        visibility: hidden;
+      }
+      .논 {
+        display: none;
+      }
+    </style>
+    <span class="블록 영역1 인라인블록">1번 영역</span>
+    <span class="블록 영역2 인라인블록">2번 영역</span>
+    <span class="블록 영역3 인라인블록 히든">3번 영역</span>
+    <span class="블록 영역4 인라인블록">4번 영역</span>
+    <span class="블록 영역5 인라인블록 논">5번 영역</span>
+    <span class="블록 영역6 인라인블록">6번 영역</span>
+
+    <h2>화면 영역 분할</h2>
+    <h3>위/아래로 2분할 하기</h3>
+    <style>
+      .컨테이너 {
+        border: 3px solid lightslategray;
+        width: 470px;
+        height: 470px;
+      }
+      .컨테이너 > div {
+        width: 100%;
+        height: 50%;
+        float: right; /* float은 영역을 유연하게 배치해 준다.*/
+      }
+      .컨테이너 > div:first-child {
+        background-color: lightsalmon;
+      }
+      .컨테이너 > div:last-child {
+        background-color: lightseagreen;
+      }
+    </style>
+    <div class="컨테이너">
+      <div></div>
+      <div></div>
+    </div>
+    <h3>위/아래로 3분할 하기</h3>
+    <style>
+      #태그2 > div:nth-child(1) {
+        height: 25%;
+        background-color: lightcoral;
+      }
+      #태그2 > div:nth-child(2) {
+        height: 50%;
+        background-color: khaki;
+      }
+      /* 
+        nth-child ◀ 특정한 순서에 있는 태그를 선택할 때 사용한다.
+      */
+      #태그2 > div:nth-child(3) {
+        height: 25%;
+        background-color: aquamarine;
+      }
+    </style>
+    <div class="컨테이너" id="태그2">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

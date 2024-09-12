@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>form 관련 내용 정리</title>
+  </head>
+
+  <body>
+    <h1>form 태그</h1>
+    <pre>
+        form 태그: 사용자의 입력 정보를 수집하고, 서버로 전송하는 데에 사용한다. 
+
+            속성
+                action: 데이터가 전달될 주소값을 지정할 때 사용한다. 
+                    ex) 파일명.html
+
+                method: 폼 데이터 전송 방식을 지정할 때 사용한다. 
+                     - get: 작성한 내용을 url 에 전송하고, 표시한다. 
+                            보안에 취약하고, 길이제한이 있다(보통 2048자 까지) 는 단점이 있다. 
+                            주로 검색할 때 많이 사용된다. 
+                    
+                    - post: 본문을 통해 데이터를 전송할 때 사용한다. 
+                            url 에 표시하지 않고 전송하는 방법이다. 
+                            GET 에 비해 상대적으로 안전하고, 데이터 길이 제한이 없다는 장점이 있다. 
+                            주로 jQuery, Ajax 에서 사용된다. 
+                            회원가입이나 아이디/비밀번호 찾기, 로그인 시에 사용된다. 
+
+                enctype: 폼 데이터의 인코딩 방식을 지정할 수 있다. 
+                         주로 파일 업로드를 진행할 때 사용한다. 
+                            multipart/form-data: 파일 업로드 시 사용
+
+                target: 폼 데이터가 제출될 때의 응답을 표시할 창이나 프레임을 지정할 수 있다. 
+                            target = "_self"; (현재 창에서 이동하기)
+                            target = "_blank"; (새 창에서 이동하기)
+
+                accept-charset: UTF-8 ◀ url(주소값) 에서, 한글 깨짐 방지를 위해 문자 인코딩을 사용한 것이다. 
+
+                autocomplete: 자동완성 기능을 설정할 때 사용한다.
+                                  기본값: on
+                                사용중지: off
+    </pre>
+
+    <h3>form 안에 작성된 input 과 textarea 태그</h3>
+    <pre>
+        form 안에 작성된 input 과 textarea 는,
+        작성된 내용이 어느 부분에 해당하는지 식별할 때
+        name 속성을 사용하여 전달한다. 
+    </pre>
+
+    <h3>
+      개발자가 원하는 값이 입력되지 않았을 때, 이동이나 실행을 방지하는 방법
+    </h3>
+    <pre>
+      preventDefault(): 이벤트 기본 동작을 방지하기 위해 사용한다. 
+                        html 태그의 기본 동작을 중지시켜, 
+                        개발자가 원하는 동작을 구현할 수 있도록 유도할 수 있다.
+
+                        form 에서는, submit 이벤트가 발생하면 
+                        폼 데이터를 서버로 전송하고 페이지를 새로고침 하는데,
+                        이 기능을 막아버리는 것이다. 
+
+        사용 방법
+        <button type="submit" onclick="제출하기버튼(event)">제출</button>
+        <script>
+          function 제출하기버튼(event) {
+            event.preventDefault();
+          }
+        </script>
+    </pre>
+
+    <h3>URL Search Params</h3>
+    <pre>
+        url 주소에 작성된 곳에서, 사용자가 입력한 데이터를 가져와
+        화면에 표시할 수 있게 해준다. 
+
+        url 이란, https://www.naver.com/ 같은 주소를 의미한다. 
+
+        window.location.search ◀ 현재 html 의 url 을 가리킨다. 
+        url 에서, ? 로 시작해서 맨 끝까지 작성된 부분을 전달한다. 
+            예를 들어,
+                url = https://www.naver.com/?이름=신짱구
+                window.location.search 는, ?이름=신짱구 를 반환해 준다. 
+                
+                url = https://www.naver.com/?이름=신짱구&나이=5
+                window.location.search 는, ?이름=신짱구&나이=5 를 반환해 준다. 
+
+                new URLSearchParams(window.location.search);
+                new URLSearchParams 안에 들어간 이름과 나이를 선택하여 가져올 때는 get 을 이용한다. 
+
+        new URLSearchParams(window.location.search);
+    </pre>
+
+    <h3>폼 작성하기</h3>
+    <form action="result.html" method="get">
+      <label>이름:</label>
+      <input type="text" name="userName" />
+      <button type="submit">전송하기</button>
+    </form>
+
+    <!-- ===== result.html =====-->
+    <h3>폼 작성 결과 확인하기</h3>
+    <div>
+      <h1>폼 결과</h1>
+      <p>
+        이름: <span id="resultName"><!-- 추후 이름 결과가 보여질 공간--></span>
+      </p>
+
+      <script>
+        $(document).ready(function () {
+          const url이름값가져오기 = new URLSearchParams(window.location.search);
+          const 가져온이름값 = url이름값가져오기.get("userName");
+
+          $("#resultName").text(가져온이름값); // 가져온 이름값 보여주기 실행
+
+          /* 
+          만약, name 속성 값에 영어나 숫자 이외의 다른 언어를 사용할 경우
+          decodeURIComponent 를 사용하여, 컴퓨터가 문자를 읽을 수 있도록 한번 더 감싸 주어야 한다. 
+
+          $("#resultName").text(decodeURIComponent(가져온이름값));
+          */
+        });
+      </script>
+    </div>
+  </body>
+</html>

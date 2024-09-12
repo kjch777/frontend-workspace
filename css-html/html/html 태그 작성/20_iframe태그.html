@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- html 5 버전-->
+<html lang="ko"> <!-- html 코딩 시작 및 검색엔진 언어 설정-->
+    
+    <head> <!-- 웹에서 보이지는 않지만, 
+                meta title style script link 등의 속성을 설정해주는 공간이다.-->
+        <meta charset="UTF-8">
+        <title>iframe 예제</title>
+    </head>
+    
+    <body> <!-- 실제로 볼 수 있는 코드를 작성하는 공간이다.-->
+        <h2>iframe 사용하기</h2>
+        <pre>
+            iframe 은 웹페이지나, 웹에 있는 정보를 포함하여 보여주는 태그이다. 
+            html 5 부터는 자주 사용되지 않는다.
+            html 을 포함하여 보여주기도 한다.
+            
+            src=불러올 주소 또는 위치 작성
+            width=가로 길이 지정
+            height=세로 길이 지정
+            frameborder=테두리를 지정할 때 사용하는 태그로, 0으로 지정하면 테두리는 생성되지 않는다.
+        </pre>
+
+        <pre>
+            iframe 은 외부에서 태그하여 보는 시도를 차단해 둔 웹 페이지나 비디오라면
+            엑스박스가 뜨면서 홈페이지에서 연결을 거부했습니다. 가 출력된다. 
+            그렇지 않은 경우에는 html 에서 src 안에 작성한 홈페이지를 정상적으로 볼 수 있다. 
+        </pre>
+
+        <iframe src="15_비디오관련태그.html" 
+                width="800"
+                height="600"
+                frameborder="0">
+        </iframe>
+        <iframe src="https://www.naver.com/" 
+                width="800" 
+                height="600"
+                frameborder="0">
+        </iframe>
+        <iframe src="https://kh-academy.co.kr/" 
+                width="800" 
+                height="600"
+                frameborder="0">
+        </iframe>
+    </body>
+
+</html> <!-- html 코딩 종료-->

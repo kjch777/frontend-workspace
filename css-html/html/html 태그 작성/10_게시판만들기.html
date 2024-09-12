@@ -1,0 +1,73 @@
+<!--
+    각각의 코드 안에 style 을 하나하나 작성해주는 것보다,
+    <head> 안에 <style> 태그를 만들어서
+    내가 꾸미고자 하는 태그 이름과 꾸밀 내용을 { } 안에 작성해주는 것이
+    한 번에, 더 강력하게 작용 한다.
+    
+    <tr style="background-color: gold;">
+    ▲ 이렇게 작성하는 것보다
+
+    <head>
+        <style>
+            th {
+                background-color: coral;
+            }
+        </style>
+    </head>
+    ▲ 이렇게 작성하는 것이 더 우선적으로 스타일을 입힌다.
+-->
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <title>게시판</title>
+        <meta charset="UTF-8"> <!--mata 는 가능한 head 안에 작성한다.-->
+        <!--변경하고자 하는 스타일이 여러개라면, { } 앞쪽 바깥에 쉼표로 구분하여 한 번에 여러개를 작성하고, 적용 가능하다.-->
+        <style>
+            th, td {
+                background-color: coral;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>게시판</h1>
+        <ul>
+            <li>
+                <h2>게시물 제목 1</h2>
+                <p>
+        작성자: 사용자1<br><br>
+        작성일: 2024-05-07<br><br>
+        내용: 이 게시물은 첫 번째 게시물입니다.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>게시물 제목 2</h2>
+<pre>
+작성자: 사용자2<br>
+작성일: 2024-05-06<br>
+내용: 이 게시물은 두 번째 게시물입니다.</pre>
+            </li>
+        </ul>
+        <h1>게시물 목록 (테이블)</h1>
+        <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
+            <tr style="background-color: gold;">
+                <th>게시물 제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>게시물 제목 1</td>
+                <td>사용자1</td>
+                <td>2024-05-07</td>
+                <td>이 게시물은 첫 번째 게시물입니다.</td>
+            </tr>
+            <tr>
+                <td>게시물 제목 2</td>
+                <td>사용자2</td>
+                <td>2024-05-06</td>
+                <td>이 게시물은 두 번째 게시물입니다.</td>
+            </tr>
+        </table>
+    </body>
+</html>

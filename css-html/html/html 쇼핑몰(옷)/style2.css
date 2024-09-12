@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header,
+  footer {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+  }
+  nav {
+    background-color: antiquewhite;
+    padding: 15px;
+    text-align: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: lightcoral;
+  }
+
+  /* main */
+  main {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .introduceClass {
+    /* 한 section이 끝날 때마다 줄바꿈 처리를 해준 것*/
+    display: block;
+
+    /* 한 section이 끝날 때마다 아래 방향으로 간격을 20px 준 것*/
+    margin-bottom: 20px;
+  }
+
+  .introduceClass .block {
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .introduceClass .block img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .introduceClass #태그1 {
+    background-color: lightgoldenrodyellow;
+  }
+
+  .introduceClass .block:last-child {
+    background-color: lightpink;
+  }
+
+  /* 팀원 소개 섹션*/
+  .teamClass {
+    /* 가로로 가운데 정렬을 위한 스타일 추가*/
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .teamClass .member {
+    /* 세로로 나눠져 있는 div 를, 가로로 배치하기*/
+    display: inline-block;
+    /*
+      display 에서 inline 만 사용할 경우,
+      가로 길이 설정이 불가능하다.
+      display 에서 inline-block 을 사용할 경우,
+      가로 길이 설정이 가능하다.
+    */
+    width: 20%;
+    padding: 15px;
+    background-color: rgb(131, 197, 219);
+    border: 2px solid lightslategrey;
+  }
+  /*
+    .teamClass 기준으로는 h2 또한 자식이기 때문에, 
+    h2 팀원 소개가 첫번째 자식이 된다.
+  */
+  .teamClass .member:nth-child(2) {
+    background-color: rgb(157, 219, 219);
+  }
+
+  .teamClass .member:nth-child(3) {
+    background-color: rgb(233, 156, 167);
+  }
+
+  .teamClass .member:nth-child(4) {
+    background-color: rgb(219, 109, 109);
+  }
+
+  /* :hover 는 어디든지 맨 뒤에 작성하면 
+     마우스 커서가 해당 태그에 위치할 경우 출력 될 스타일을 설정할 수 있다.
+     모든 숫자에 동일한 디자인을 적용하고 싶다면 n을 작성해 주면 된다.
+  */
+  .teamClass .member:nth-child(n):hover {
+    background-color: rgb(111, 111, 177);
+    color: white;
+    font-weight: bold; /* 폰트 굵기 적용*/
+    text-shadow: 0 0 15px white;
+    /* box-shadow: 0 0 0 white; 여기에는 테두리가 없기 때문에 사용할 수 없다.*/
+  }
+
+  /* 팀클래스 내부에 있는 멤버클래스 내부에 있는 이미지*/
+  .teamClass .member img {
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .fix {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    background-color: rgb(16, 82, 82);
+  }
+
+  .fix a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 42.5px;
+    color: rgb(218, 169, 215);
+    user-select: none;
+  }

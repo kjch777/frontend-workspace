@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Practice 2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <ul id="item-list"></ul>
+    <button id="add-item">추가하기</button>
+    <script>
+        $(document).ready(function(){
+            $("#add-item").click(function() {
+                $("#item-list").append("<li>item</li>");
+            })
+            $("#item-list").on("click", "li", function() {
+                $(this).remove();
+            })
+        })
+    </script>
+</body>
+</html>

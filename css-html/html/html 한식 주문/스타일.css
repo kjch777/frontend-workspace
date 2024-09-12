@@ -1,0 +1,27 @@
+
+
+/* ***** 메뉴.html에 공통적으로 작성한 styleSheet ***** */
+
+.메인 {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.메뉴 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.아이템 {
+    text-align: center;
+}
+
+/* div 클래스의 아이템 내부에 있는 img만 크기 조정하기*/
+.아이템 img {
+    width: 200px;
+    border-radius: 100px;
+}
+
+/* ***** 주문하기.html에 작성한 styleSheet ***** */
+

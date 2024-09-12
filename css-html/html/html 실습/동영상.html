@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>동영상</title>
+        <style>
+            body {
+                margin: 0 auto;
+                text-align: center;
+            }
+            video {
+                width: 500px;
+                height: 500px;
+            }
+            table {
+                border: 1px;
+                border-collapse: collapse;
+            }
+            th, td, tr {
+                border: 1px solid;
+                text-align: center;
+            }
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+            img {
+                width: 50%;
+                height: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>동영상 게시판</h1>
+        <img class="icon" src="../이미지들/healing.jpg">
+        <video autoplay muted loop>
+            <source src="C:/Users/user1/frontend-workspace/html/비디오들/210925_small.mp4" type="video/mp4">
+        </video>
+        <a href="홈페이지메인.html"><img class="icon" src="홈페이지 로고.png">홈페이지</a>
+        <a href="홈페이지게시판.html"><img src="게시판 로고.png" class="icon">게시판</a>
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>방문일</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>신짱구</td>
+                <td>2024-05-09</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>김철수</td>
+                <td>2024-05-08</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>이유리</td>
+                <td>2024-05-07</td>
+            </tr>
+        </table>
+    </body>
+
+</html>

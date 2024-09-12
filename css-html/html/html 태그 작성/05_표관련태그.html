@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <title>표 관련 태그 모음</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>표 관련 기본 태그</h1>
+        <h3>table(표) 태그</h3>
+        <pre>
+            - 웹 문서에서 자료(데이터) 정리를 위해 사용하는 태그이다.
+            - table 태그는 행, 열을 작성하기 위한 공간을 나타낸다. 
+        </pre>
+        <h3>table tr(Table Row) 태그</h3>
+        <pre>
+            - 테이블의 한 행을 나타내는 태그이다.
+        </pre>
+        <h3>table td(Table Data) 태그</h3>
+        <pre>
+            - 한 행의 한 칼럼을 나타내는 태그이다.
+              칼럼 == 엑셀에서 셀 하나
+        </pre>
+        <hr>
+        <h4>테이블 연습 1</h4>
+        <!--
+            border : 테이블 테두리의 두께를 지정할 때 사용한다.
+                     1이 설정할 수 있는 가장 작은 수이고,
+                     숫자가 커질 수록 두꺼워진다.
+            style = "border-collapse: collapse;"
+            테이블 테두리가 겹치지 않도록 해준다.
+            깔끔하게 표시하고 싶을 때 사용한다.
+        -->
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <td>이름</td>
+                <td>나이</td>
+                <td>주소</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>20</td>
+                <td>서울시 강남구</td>
+            </tr>
+            <tr>
+                <td>신짱구</td>
+                <td>5</td>
+                <td>떡잎마을</td>
+            </tr>
+        </table>
+        <hr><hr><hr>
+        <table border="2.5" style="border-collapse: collapse;">
+            <tr>
+                <td>이름</td>
+                <td>연락처</td>
+                <td>이메일</td>
+            </tr>
+            <tr>
+                <td>신짱구</td>
+                <td>010-0000-0000</td>
+                <td>1@naver.com</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>010-1111-1111</td>
+                <td>2@daum.net</td>
+            </tr>
+            <tr>
+                <td>박수지</td>
+                <td>010-2222-2222</td>
+                <td>3@gmail.com</td>
+            </tr>
+        </table>
+        <hr><hr><hr>
+        <table border="4.4" style="border-collapse: collapse;">
+            <tr>
+                <td style="background-color: orange;">음식</td>
+                <td style="background-color: green;">가격</td>
+            </tr>
+            <tr>
+                <td style="background-color: pink;">피자</td>
+                <td style="background-color: gold;">16,000원</td>
+            </tr>
+            <tr>
+                <td style="background-color: pink;">햄버거</td>
+                <td style="background-color: gold;">8,000</td>
+            </tr>
+            <tr>
+                <td style="background-color: pink;">치킨</td>
+                <td style="background-color: gold;">20,000</td>
+            </tr>
+        </table>
+    </body>
+</html>

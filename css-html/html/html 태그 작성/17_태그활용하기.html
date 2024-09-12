@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- html 5 버전-->
+
+<html> <!-- html 코딩 시작-->
+    
+    <head> <!-- 화면에 보이지는 않지만, 설정 코드를 작성할 수 있는 공간
+                meta title style script link 등-->
+        
+        <meta charset="UTF-8"> <!-- 컴퓨터와 오류없는 언어호환을 위한 코드-->
+        <style>
+            body {
+                margin: 0 auto; /*자동 정렬 설정*/
+                text-align: center; /*글자 가운데 정렬*/
+                background-color: rgb(219, 236, 236);
+            }
+            video, img {
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+        <title>블로그 비디오 이미지</title>
+    </head>
+    <!-- 모두 가운데 정렬을 하고 싶을 때는,
+         body 에 style 을 지정해주면 된다.
+         style 에서 margin:0 auto; 는 자동으로 가운데 정렬을 하고 싶을 때 작성한다.
+         가끔 제대로 적용되지 않지만, 일단 작성 해주는게 좋다.
+         text-align: center 는 글자를 모두 가운데 정렬할 때 사용한다.-->
+    <body>
+        <h2>비디오와 이미지를 공유하는 블로그</h2>
+        <p><mark> 파일 공유</mark> 블로그에 성공적으로 접속했습니다.</p>
+        <video autoplay loop muted>
+            <source src="C:/Users/user1/frontend-workspace/html/비디오들/210925_small.mp4" type="video/mp4">
+        </video>
+        <p><h3>나비의 춤</h3></p>
+        <img src="../이미지들/healing.jpg">
+        <p><h3>힐링이가 나비탕이 돼버렸어...</h3></p>
+    </body>
+
+</html> <!-- html 코딩 종료-->
